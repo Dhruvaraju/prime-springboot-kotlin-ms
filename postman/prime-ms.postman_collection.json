@@ -1,0 +1,335 @@
+{
+	"info": {
+		"_postman_id": "f080be9d-0763-48d7-b75a-484970dbd29b",
+		"name": "prime-springboot-kotlin-ms",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Local",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\": \"norman\",\r\n    \"firstName\": \"norman\",\r\n    \"lastName\": \"bates\",\r\n    \"email\": \"norman@batesmotel.com\",\r\n    \"organizationName\": \"Bates Motel\",\r\n    \"panNumber\": \"13051305\",\r\n    \"password\": \"normanbates\",\r\n    \"addressLine01\": \"Nat West STreet 001\",\r\n    \"addressLine02\": \"Normandy\",\r\n    \"state\": \"Paris\",\r\n    \"country\": \"France\",\r\n    \"pincode\": \"456123\",\r\n    \"userType\": \"INDIVIDUAL\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "usersList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\":\"norman\",\r\n    \"password\":\"normanbates\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/authenticate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"authenticate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "product-buy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"buyPrice\": 320,\r\n  \"marketPrice\": 340,\r\n  \"productID\": \"TCS\",\r\n  \"productName\": \"Tata Consultancy\",\r\n  \"productType\": \"STOCK\",\r\n  \"quantity\": 50,\r\n  \"subcategory\": \"STOCK\",\r\n  \"userName\": \"norman\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/products/buy",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"buy"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "product-sell",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"buyPrice\": 320,\r\n  \"marketPrice\": 340,\r\n  \"productID\": \"TCS\",\r\n  \"productName\": \"Tata Consultancy\",\r\n  \"productType\": \"STOCK\",\r\n  \"quantity\": 25,\r\n  \"subcategory\": \"STOCK\",\r\n  \"userName\": \"norman\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/products/sell",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"sell"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "products-owned",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/products/norman",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"norman"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register-Ipo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"salePercentage\": 20,\r\n  \"companyName\": \"Lex Corp\",\r\n  \"marketCap\": 340000000,\r\n  \"userName\": \"norman\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/ipo/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"ipo",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ipo-Owned",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/ipo/norman",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"ipo",
+								"norman"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "MutualFund-Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\":\"norman\",\r\n    \"fundType\":\"CLOSED\",\r\n    \"riskLevel\":\"DIAMOND\",\r\n    \"tenure\": 10,\r\n    \"investmentAmount\": 2500,\r\n    \"paymentMode\": \"MONTHLY\",\r\n    \"maturityAmount\": 25000000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/mutual-fund/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"mutual-fund",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mutual-Funds-Owned",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/mutual-fund/norman",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"mutual-fund",
+								"norman"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "contactUs-Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\": \"norman\",\r\n    \"email\": \"norman@batesmotel.com\",\r\n    \"phoneNumber\": \"123456789\",\r\n    \"message\":\"This is a test message to check if all are working fine.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/messages/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"messages",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "contactUs-messages",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/messages",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"messages"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
